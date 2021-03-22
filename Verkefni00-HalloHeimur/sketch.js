@@ -35,4 +35,6 @@ function setup(){
     text("Sigríður Bára:)",200,60);
 
 
+
+
 }
