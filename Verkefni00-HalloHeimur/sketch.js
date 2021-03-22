@@ -29,8 +29,10 @@ function setup(){
     ellipse(100,230,65,65);
     fill(0);
     textSize(20);
-    text("Halló heimur",200,40);
+    text("Halló heimur - Form og litir",150,40);
     fill(0);
-    textSize(20);
-    text("Sigríður Bára",400,300);
+    textSize(18);
+    text("Sigríður Bára:)",200,60);
+
+
 }
