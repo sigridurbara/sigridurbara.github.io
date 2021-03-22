@@ -5,25 +5,25 @@ Til þess að læra að gera eitthvað, prófaðu að leita á google af því s
 
 body {
   background-color: #546E7A;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 h1 {
-  color: #FFFFFF;
-  background-color: #90A4AE;
+  color: #FFFFFF ;
+  background-color: #00BCD4;
   font-family: Helvetica, sans-serif;
   font-style: normal;
 }
 
 h2 {
-  color: #FFFFFF;
+  color: #00BCD4 ;
   background-color:#546E7A;
   font-style: oblique;
   text-align: left;
 }
 
 a {
-  color: #000000;
+  color: #FFFFFF ;
 }
 
 a:hover {
