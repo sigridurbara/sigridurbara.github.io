@@ -6,28 +6,30 @@ Til þess að læra að gera eitthvað, prófaðu að leita á google af því s
 body {
   background-color: #546E7A;
   color: #FFFFFF;
+  font-family: "ms mincho",monospace; 
 }
 
 h1 {
   color: #FFFFFF ;
   background-color: #00BCD4;
-  font-family: Helvetica, sans-serif;
+  font-family: "Courier New", monospace;
   font-style: normal;
 }
 
 h2 {
   color: #00BCD4 ;
   background-color:#546E7A;
-  font-style: oblique;
+  font-family: "Courier New", monospace;
+  font-style: normal;
   text-align: left;
 }
 
 a {
-  color: #FFFFFF ;
+  color: #00BCD4 ;
 }
 
 a:hover {
-  color: #00BCD4 ;
+  color: #B2EBF2 ;
   font-size: 20px;
 }
 
