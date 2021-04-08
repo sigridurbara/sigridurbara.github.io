@@ -57,6 +57,9 @@ function draw() {
 
 }
 
-//function mousePressed() {
-	//bukur = random (50,150);
-//}
+function mousePressed() {
+	andlit = random(100,130);
+  minnieyru = random(10,50);
+  augu = random(25,60);
+
+}
