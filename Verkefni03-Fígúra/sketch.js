@@ -53,16 +53,8 @@ function draw() {
   line(mouseX+35,mouseY+12,mouseX+augu+augu,mouseY); //efsta veiðihár
   line(mouseX+38,mouseY+20,mouseX+augu+augu,mouseY+20); //miðju veiðihár
   line(mouseX+35,mouseY+28,mouseX+augu+augu,mouseY+40); //neðsta veiðihár
-  
 
-  //ellipse(mouseX,mouseY - bukur/2, 80,80);
-  // AUGUN
-  //fill(100);
-  //ellipse (mouseX - 25,mouseY - bukur/2, 20,40);
-  //ellipse (mouseX + 25,mouseY - bukur/2, 20,40);
-  // VEIÐIHÁRIN
-  //line (mouseX - 20, mouseY + bukur/2, mouseX - 20, mouseY + bukur/2 + 50);
-  //line (mouseX + 20, mouseY + bukur/2, mouseX + 20, mouseY + bukur/2 + 50);
+
 }
 
 //function mousePressed() {
