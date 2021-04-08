@@ -11,6 +11,7 @@ function setup() {
 }
 function draw() {
   background(178, 235, 242);
+  strokeWeight(2);
 // ANDLITIÐ
   fill(120, 144, 156);
   rect(mouseX,mouseY,150,andlit,0,0,10,10);
@@ -30,16 +31,29 @@ function draw() {
 //AUGUN
   //vinstra auga
   fill(0, 162, 232);
-  ellipse(mouseX-augu/2-17.5,mouseY-augu/2,augu,augu);
+  ellipse(mouseX-augu/2-14.5,mouseY-augu/2,augu,augu);
   //hægra auga
   fill(0, 162, 232);
-  ellipse(mouseX+augu/2+17.5,mouseY-augu/2,augu,augu);
+  ellipse(mouseX+augu/2+14.5,mouseY-augu/2,augu,augu);
   //vinstri augasteinn
   fill(0);
-  ellipse(mouseX-augu/2-17.5,mouseY-augu/2,augu/5,augu/1.5);
+  ellipse(mouseX-augu/2-14.5,mouseY-augu/2,augu/5,augu/1.5);
   //hægri augasteinn
   fill(0);
-  ellipse(mouseX+augu/2+17.5,mouseY-augu/2,augu/5,augu/1.5);
+  ellipse(mouseX+augu/2+14.5,mouseY-augu/2,augu/5,augu/1.5);
+//NEFIÐ
+  fill(0);
+  triangle(mouseX-4,mouseY+8,mouseX,mouseY+16,mouseX+4,mouseY+8);
+//VEIÐIHÁRIN
+  //hægri veiðihár
+  line(mouseX-augu-augu,mouseY,mouseX-35,mouseY+12); //efsta veiðihár
+  line(mouseX-augu-augu,mouseY+20,mouseX-38,mouseY+20); //miðju veiðihá
+  line(mouseX-augu-augu,mouseY+40,mouseX-35,mouseY+28); //neðsta veiðihár
+  //vinstri veiðihár
+  line(mouseX+35,mouseY+12,mouseX+augu+augu,mouseY); //efsta veiðihár
+  line(mouseX+38,mouseY+20,mouseX+augu+augu,mouseY+20); //miðju veiðihár
+  line(mouseX+35,mouseY+28,mouseX+augu+augu,mouseY+40); //neðsta veiðihár
+  
 
   //ellipse(mouseX,mouseY - bukur/2, 80,80);
   // AUGUN
