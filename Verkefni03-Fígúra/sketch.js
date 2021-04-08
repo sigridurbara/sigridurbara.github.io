@@ -9,7 +9,7 @@ function setup() {
   rectMode(CENTER);
 }
 function draw() {
-  background(179, 157, 219);
+  background(178, 235, 242);
 // ANDLITIÐ
   fill(84, 110, 122);
   rect(mouseX,mouseY,150,andlit,0,0,10,10);
@@ -20,6 +20,9 @@ function draw() {
   //hægra eyra
   fill(84, 110, 122);
   triangle(mouseX+15,mouseY-andlit/2,mouseX+45,mouseY-andlit/2-eyru,mouseX+75,mouseY-andlit/2);
+//AUGUN
+  //vinstra auga
+
   //ellipse(mouseX,mouseY - bukur/2, 80,80);
   // AUGUN
   //fill(100);
