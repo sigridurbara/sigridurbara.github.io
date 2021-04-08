@@ -34,6 +34,12 @@ function draw() {
   //hægra auga
   fill(0, 162, 232);
   ellipse(mouseX+augu/2+17.5,mouseY-augu/2,augu,augu);
+  //vinstri augasteinn
+  fill(0);
+  ellipse(mouseX-augu/2-17.5,mouseY-augu/2,augu/5,augu/1.5);
+  //hægri augasteinn
+  fill(0);
+  ellipse(mouseX+augu/2+17.5,mouseY-augu/2,augu/5,augu/1.5);
 
   //ellipse(mouseX,mouseY - bukur/2, 80,80);
   // AUGUN
