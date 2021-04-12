@@ -29,9 +29,11 @@ function setup(){
     ellipse(100,230,65,65);
     fill(0);
     textSize(20);
+    textFont('MS mincho');
     text("Halló heimur - Form og litir",150,40);
     fill(0);
     textSize(18);
+    textFont('MS mincho');
     text("Sigríður Bára:)",200,60);
 
 
