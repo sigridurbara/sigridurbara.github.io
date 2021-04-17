@@ -18,7 +18,7 @@ function draw() {
 //MIÐJU RÖÐ: FERNINGAR
   fill(random(180,350),70,100);
   for(var x1 = 100; x1 < 300; x1 = x1 + 25) {
-      ellipse(x-10,190,20,20);
+      rect(x-10,190,20,20);
 }
 
 //NEÐSTA RÖÐ: HRINGIR
