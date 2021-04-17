@@ -10,20 +10,20 @@ function setup() {
 
 //EFSTA RÖÐ: HRINGIR
 function draw() {
-  for(var x = 50; x < 350; x = x + 25) {
+  for(var x = 50; x <= 350; x = x + 25) {
     fill(random(180,350),70,100);
     ellipse(x,150,20,20)
   }
 
 //MIÐJU RÖÐ: FERNINGAR
   fill(random(180,350),70,100);
-  for(var x1 = 100; x1 < 300; x1 = x1 + 25) {
-      rect(x-10,190,20,20);
-}
+  for(var x1 = 100; x1 <= 300; x1 = x1 + 25) {
+      rect(x1-10,190,20,20);
+  }
 
 //NEÐSTA RÖÐ: HRINGIR
-  for(var x2 = 75; x2 < 325; x2 = x2 + 25) {
+  for(var x2 = 75; x2 <= 325; x2 = x2 + 25) {
     fill(random(180,350),70,100);
-    ellipse(x,250,20,20)
+    ellipse(x2,250,20,20)
   }
 }
