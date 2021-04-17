@@ -9,10 +9,8 @@ function setup() {
 }
 //Default mode er ellipseMode(CENTER)
 function draw() {
-  for(var x = 300; x < width; x = x-15) {
+  for(var x = 300; x > 0; x = x-30) {
     fill(random(180,350),70,100);
-    for(var y = 300; y < height; y = y-15) {
-        ellipse(200, 200, x, y);
-    }
+        ellipse(200, 200, x, x);
   }
 }

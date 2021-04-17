@@ -8,11 +8,22 @@ function setup() {
   colorMode(HSB);
 }
 
+//EFSTA RÖÐ: HRINGIR
 function draw() {
-  for(var x = 10; x < width; x = x+20) {
+  for(var x = 50; x < 350; x = x + 25) {
     fill(random(180,350),70,100);
-    for(var y = 10; y < height; y = y+20) { 
-        ellipse(x, y, 15, 15);
-    }
+    ellipse(x,150,20,20)
+  }
+
+//MIÐJU RÖÐ: FERNINGAR
+  fill(random(180,350),70,100);
+  for(var x1 = 100; x1 < 300; x1 = x1 + 25) {
+      ellipse(x-10,190,20,20);
+}
+
+//NEÐSTA RÖÐ: HRINGIR
+  for(var x2 = 75; x2 < 325; x2 = x2 + 25) {
+    fill(random(180,350),70,100);
+    ellipse(x,250,20,20)
   }
 }
