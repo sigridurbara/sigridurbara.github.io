@@ -8,10 +8,11 @@ function setup() {
 
 function draw() {
   background(255, 215, 0);
-  for(var x = 10; x < width; x = x+20) {
-    fill(random(180,350),70,100);
-    for(var y = 10; y < height; y = y+20) {
-        ellipse(x, y, 15, 15);
+  for(var y = 20; y < height; y = y+30) {
+
+    //fill(random(180,350),70,100);
+    //for(var y = 10; y < height; y = y+20) {
+        //ellipse(x, y, 15, 15);
     }
   }
 }
