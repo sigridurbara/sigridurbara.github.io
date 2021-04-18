@@ -1,7 +1,7 @@
 // Hér kemur kóðinn þinn:
 
 function setup() {
-  createCanvas();
+  createCanvas(600,450);
   colorMode(HSB);
   background(random(360),50,100);
   //strokeWeight(2);
@@ -9,7 +9,7 @@ function setup() {
 
 }
 
-function draw() {
+//function draw() {
 
 
-}
+//}
