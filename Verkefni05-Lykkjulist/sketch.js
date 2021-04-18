@@ -2,10 +2,11 @@
 
 function setup() {
   createCanvas();
-  background();
+  colorMode(HSB);
+  background(random(360),50,100);
   //strokeWeight(2);
   //frameRate(3);
-  //colorMode(HSB);
+
 }
 
 function draw() {
