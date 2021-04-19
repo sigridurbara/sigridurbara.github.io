@@ -1,5 +1,6 @@
 // Hér kemur kóðinn þinn:
 
+//fjöldiK = fjöldi krónublaða
 var fjöldiK = 15
 
 function setup() {
@@ -7,7 +8,7 @@ function setup() {
   colorMode(HSB);
   background(random(160,360),50,100);
   angleMode(DEGREES);
-  //frameRate(3);
+  frameRate(2);
   }
 
 function draw() {
@@ -15,9 +16,9 @@ function draw() {
   blóm();
 function bakgrunnur(){
   push();
-  for(var x = 30; x < width; x = x+20) {
-    fill(random(180,350),70,100);
-      for(var y = 10; y < height; y = y+20) {
+  for(var x = 20; x < width-20; x = x+20) {
+    fill(random(180,350),65,100);
+      for(var y = 20; y < height-20; y = y+20) {
       ellipse(x, y, 15, 15);
 
     }
@@ -29,8 +30,9 @@ function blóm(){
   push();
   translate(width/2, height/3);
 //stilkurinn
-  fill(115,100,40);
+  fill(180,80,100);
   noStroke();
+  stroke(0,0,0);
   rect(-2,0,4,140);
 //miðjan í blóminu
   fill(180,80,100);
@@ -41,7 +43,7 @@ function blóm(){
     rotate(angle);
     fill(0,0,100);
     strokeWeight(1);
-    stroke(115,100,40);
+    stroke(0,0,0);
     ellipse(35,0,50,10);
   }
   pop();
