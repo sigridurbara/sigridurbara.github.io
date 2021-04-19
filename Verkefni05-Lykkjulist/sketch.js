@@ -12,8 +12,12 @@ function setup() {
   }
 
 function draw() {
+  push();
   translate(width/2, height/3);
-  fill(180,80,100);
+  fill(115,100,40);
+  noStroke();
+  rect(-2,0,4,140);
+  fill(180,80,100,);
   ellipse(0, 0,20,20);
   for (var i = 0; i<fjöldiK; i++){
     angle = 24
@@ -21,10 +25,9 @@ function draw() {
     fill(0,0,100);
     ellipse(35,0,50,10);
   }
-  translate(width/2,height/3);
-  fill(115,100,40);
-  rect(width/2-5,height/3,10,70);
 
+
+  pop();
 
 
 
