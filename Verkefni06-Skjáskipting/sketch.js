@@ -6,7 +6,7 @@ var fjöldiK = 15
 function setup() {
   createCanvas(450,600);
   colorMode(HSB);
-  background(random(160,360),50,100);
+  background(random(160,360),50,100); 
   angleMode(DEGREES);
   frameRate(2);
   }
