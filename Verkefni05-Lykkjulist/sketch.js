@@ -21,7 +21,9 @@ function draw() {
     fill(0,0,100);
     ellipse(35,0,50,10);
   }
+  translate(width/2,height/3);
   fill(115,100,40);
+  rect(width/2-5,height/3,10,70);
 
 
 
