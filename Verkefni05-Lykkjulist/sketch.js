@@ -1,6 +1,6 @@
 // Hér kemur kóðinn þinn:
 
-var fjöldiK = 12
+var fjöldiK = 15
 
 function setup() {
   createCanvas(450,600);
@@ -16,11 +16,12 @@ function draw() {
   fill(180,80,100);
   ellipse(0, 0,20,20);
   for (var i = 0; i<fjöldiK; i++){
-    angle = 60
+    angle = 24
     rotate(angle);
     fill(0,0,100);
-    ellipse(50,0,50,20);
+    ellipse(35,0,50,10);
   }
+  fill(115,100,40);
 
 
 
