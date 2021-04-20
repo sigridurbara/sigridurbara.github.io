@@ -15,15 +15,15 @@ function draw() {
 
 function bakgrunnur(){
   push();
-  background(255);
-  translate(width/2,height/2);
+  background(0);
+  //translate(width/2,height/2);
   fill(34, 139, 34);
   if(mouseX>width/2 && mouseY<height/3){
-    
+    rect(width/2,-5,width/2,height/3+5);
   }
 
 
 
-    }
+    //}
   }
 }
