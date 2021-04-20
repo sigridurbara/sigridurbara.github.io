@@ -1,7 +1,7 @@
 // Hér kemur kóðinn þinn:
 
 //fjöldiK = fjöldi krónublaða
-//var fjöldiK = 15
+var y = 10x + height/3
 
 function setup() {
   createCanvas(450,600);
