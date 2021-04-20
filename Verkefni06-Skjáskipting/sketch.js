@@ -1,9 +1,5 @@
 // Hér kemur kóðinn þinn:
 
-//translate x-hnit : fjólubláBlóm
-var x = random(width/2+20,width/2-20)
-//translate y-hnit : fjólubláBlóm
-var y = random(height/3+20,height/3*2-20)
 
 function setup() {
   createCanvas(500,500);
@@ -55,13 +51,18 @@ function fjólublárFerningur(){
 
 function fjólubláBlóm(){
   push();
-  translate(x,y);
-  noStroke();
+  //translate x-hnit : fjólubláBlóm
+  //var x = random(width/2+20,width/2-20);
+  //translate y-hnit : fjólubláBlóm
+  //var y = random(height/3+20,height/3*2-20);
+  translate(300,300);
+  fill(204, 101, 192, 127);
+  stroke(127, 63, 120);
   for (let i = 0; i < 10; i ++) {
-    ellipse(x, y, 20, 80);
-    rotate(PI/5);
+    ellipse(0, 30, random(10,15),random(60,70));
+    rotate(PI/5)
   }
-  pop();
 }
+pop();
 
 }
