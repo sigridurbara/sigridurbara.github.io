@@ -12,6 +12,7 @@ function setup() {
 function draw() {
   background(0);
   grænnFerningur();
+  fjólublárFerningur();
 
 function grænnFerningur(){
   push();
