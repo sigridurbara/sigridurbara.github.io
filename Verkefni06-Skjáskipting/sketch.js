@@ -10,12 +10,12 @@ function setup() {
   }
 
 function draw() {
-  background(0);
+  background(255);
   grænnFerningur();
   fjólublárFerningur();
 
 function grænnFerningur(){
-  push();
+  //push();
   //background(0);
   fill(34, 139, 34);
   if(mouseX>width/2 && mouseY<height/3){
@@ -25,11 +25,11 @@ function grænnFerningur(){
     fill(143, 188, 139);
     rect(width/2,-5,width/2,height/3+5);
   }
-  pop();
+  //pop();
 }
 
 function fjólublárFerningur(){
-  push();
+  //push();
   fill(139, 0, 139);
   if(mouseX<width/2 && mouseY>height-100){
     rect(0,height,width/2,height-100);
@@ -38,6 +38,7 @@ function fjólublárFerningur(){
     fill(106, 90, 205);
     rect(0,height,width/2,height-100);
   }
+  //pop();
 }
 
 
