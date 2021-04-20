@@ -31,11 +31,11 @@ function fjólublárFerningur(){
   push();
   fill(139, 0, 139);
   if(mouseX<width/2 && mouseY>height-100){
-    rect();
+    rect(0,height,width/2,height-100);
   }
   else{
     fill(106, 90, 205);
-    rect();
+    rect(0,height,width/2,height-100);
   }
 }
 
