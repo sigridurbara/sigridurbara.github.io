@@ -1,22 +1,25 @@
 // Hér kemur kóðinn þinn:
 
 //fjöldiK = fjöldi krónublaða
-var fjöldiK = 15
+//var fjöldiK = 15
 
 function setup() {
   createCanvas(450,600);
-  colorMode(HSB);
-  background(random(160,360),50,100); 
-  angleMode(DEGREES);
-  frameRate(2);
+  //colorMode(HSB);
+  background(0,0,100);
+  //angleMode(DEGREES);
+  //frameRate(2);
   }
 
 function draw() {
   bakgrunnur();
   blóm();
+
 function bakgrunnur(){
   push();
-  for(var x = 20; x < width-20; x = x+20) {
+  translate(width/3,height/3);
+  if(mouseX>width/3 && mouseY>height/2);
+    for(var x = 20; x < width-20; x = x+20) {
     fill(random(180,350),65,100);
       for(var y = 20; y < height-20; y = y+20) {
       ellipse(x, y, 15, 15);
