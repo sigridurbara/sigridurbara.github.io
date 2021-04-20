@@ -13,12 +13,14 @@ function draw() {
   grænnFerningur();
   fjólubleikurFerningur();
   fjólublárFerningur();
+  fjólubláBlóm();
+
 
 
 function grænnFerningur(){
   push();
   //background(0);
-  fill(34, 139, 34,95);
+  fill(34, 139, 34);
   if(mouseX>width/2 && mouseY<height/3){
     rect(width/2,-5,width/2,height/3+5);
   }
@@ -49,20 +51,35 @@ function fjólublárFerningur(){
   pop();
 }
 
+
 function fjólubláBlóm(){
-  push();
-  //translate x-hnit : fjólubláBlóm
-  //var x = random(width/2+20,width/2-20);
-  //translate y-hnit : fjólubláBlóm
-  //var y = random(height/3+20,height/3*2-20);
-  translate(300,300);
-  fill(204, 101, 192, 127);
-  stroke(127, 63, 120);
-  for (let i = 0; i < 10; i ++) {
-    ellipse(0, 30, random(10,15),random(60,70));
-    rotate(PI/5)
+  if(mouseIsPressed){
+    push();
+    translate(350,300);
+    fill(204, 101, 192, 127);
+    stroke(127, 63, 120);
+  //blómið
+    for(let i = 0; i < 20; i++){
+      rotate(PI/5)
+      ellipse(0, 30, random(10,15),random(60,70));
+    }
+  //innri hringur
+    for(let j = 0; j < 20; j++){
+      rotate(PI/5);
+      ellipse(100,80,random(5,10),random(40,50));
+    }
+  //ytri hringur
+    for(let j = 0; j < 20; j++){
+      rotate(PI/5);
+      ellipse(140,150,random(7),random(25,35));
+    }
+  pop();
+
   }
 }
-pop();
+
+//function línur(){
+
+//}
 
 }
