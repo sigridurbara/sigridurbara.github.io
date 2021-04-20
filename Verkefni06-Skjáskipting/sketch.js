@@ -14,11 +14,12 @@ function draw() {
   fjólubleikurFerningur();
   fjólublárFerningur();
   fjólubláBlóm();
-
+  línur();
 
 
 function grænnFerningur(){
   push();
+  noStroke();
   //background(0);
   fill(34, 139, 34);
   if(mouseX>width/2 && mouseY<height/3){
@@ -33,6 +34,7 @@ function grænnFerningur(){
 
 function fjólubleikurFerningur(){
   push();
+  noStroke();
   fill(106, 90, 205);
   if(mouseX<width/2 && mouseY>height-50){
     rect(0,height-50,width/2,height-50);
@@ -46,6 +48,7 @@ function fjólubleikurFerningur(){
 
 function fjólublárFerningur(){
   push();
+  noStroke();
   fill(147, 112, 219,80);
   rect(width/2,height/3,width/2,height/3*2);
   pop();
@@ -78,8 +81,21 @@ function fjólubláBlóm(){
   }
 }
 
-//function línur(){
-
-//}
+function línur(){
+  //if(){
+  push();
+  strokeWeight(2);
+  stroke(0);
+  line(0,67,50,0);
+  line(0,133,100,0);
+  line(0,215,165,0);
+  line(0,298,225,0);
+  line(0,380,250,43);
+  line(0,450,250,120);
+  line(60,450,250,195);
+  line(120,450,250,270);
+  line(175,450,250,350);
+  //}
+}
 
 }
