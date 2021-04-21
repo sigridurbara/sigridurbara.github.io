@@ -6,6 +6,7 @@ function setup() {
   colorMode(RGB);
   noStroke();
   frameRate(2);
+  angleMode(DEGREES);
   }
 
 function draw() {
@@ -17,29 +18,7 @@ function draw() {
   fjólubláBlóm();
   línur();
 
-function hvíturFerningur(){
-  push();
-  noStroke();
-  if(mouseX<width/2 && mouseY<height-50){
-//teikna svart blóm
-  translate(125, 125);
-  //stilkurinn
-  fill(180,80,100);
-  noStroke();
-  stroke(0,0,0);
-  rect(-2,0,4,140);
-  //miðjan í blóminu
-  fill(180,80,100);
-  ellipse(0, 0,20,20);
-  //krónublöðin
-  for (var i = 0; i<fjöldiK; i++){
-    angle = 24
-    rotate(angle);
-    fill(0,0,100);
-    strokeWeight(1);
-    stroke(0,0,0);
-    ellipse(35,0,50,10);
-
+//function hvíturFerningur_2(){
   //lína þvert yfir hinar línurnar
     //strokeWeight(2);
     //stroke(0);
@@ -47,12 +26,12 @@ function hvíturFerningur(){
   //gera ferninginn ljós bláan
     //fill(240,255,255);
     //rect(0,0,250,450);
-  }
+  //}
   //else{
     //fill(255);
     //rect(0,0,250,450);
   //}
-}
+//}
 
 function grænnFerningur(){
   push();
@@ -140,5 +119,24 @@ function línur(){
   line(175,450,250,350);
   //}
 }
+pop();
+
+function hvíturFerningur(){
+  push();
+  var fjöldiK = 6
+  noStroke();
+  if(mouseX<width/2 && mouseY<height-50){
+//teikna svart blóm
+  translate(125, 125);
+  //krónublöðin
+  for (var i = 0; i<fjöldiK; i++){
+    angle = 24
+    rotate(angle);
+    fill(0);
+    noStroke();
+    ellipse(35,0,50,10);
+    }
+    pop();
+  }
 
 }
