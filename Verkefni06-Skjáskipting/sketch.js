@@ -105,7 +105,7 @@ function fjólubláttBlóm(){
   }
 }
 
-function keyPressed(){
+function keyPressed(){ //línur
   if(keyCode == 32){
     push();
     strokeWeight(2);
