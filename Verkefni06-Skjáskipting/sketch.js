@@ -6,17 +6,17 @@ function setup() {
   colorMode(RGB);
   noStroke();
   frameRate(2);
-  angleMode(DEGREES);
   }
 
 function draw() {
   background(255);
-  hvíturFerningur();
+  //hvíturFerningur_2();
   grænnFerningur();
   fjólubleikurFerningur();
   fjólublárFerningur();
-  fjólubláBlóm();
+  fjólubláttBlóm();
   línur();
+  hvíturFerningur();
 
 //function hvíturFerningur_2(){
   //lína þvert yfir hinar línurnar
@@ -77,9 +77,10 @@ function fjólublárFerningur(){
 }
 
 
-function fjólubláBlóm(){
+function fjólubláttBlóm(){
   if(mouseIsPressed){
     push();
+    angleMode(RADIANS);
     translate(350,300);
     fill(204, 101, 192, 127);
     stroke(127, 63, 120);
@@ -118,25 +119,32 @@ function línur(){
   line(120,450,250,270);
   line(175,450,250,350);
   //}
+  pop();
 }
-pop();
+
 
 function hvíturFerningur(){
-  push();
-  var fjöldiK = 6
   noStroke();
   if(mouseX<width/2 && mouseY<height-50){
 //teikna svart blóm
-  translate(125, 125);
-  //krónublöðin
-  for (var i = 0; i<fjöldiK; i++){
-    angle = 24
-    rotate(angle);
+    push();
+    angleMode(DEGREES);
+    var fjöldiK = 8
+    translate(80,80);
+  //miðjan í blóminu
     fill(0);
-    noStroke();
-    ellipse(35,0,50,10);
+    ellipse(0, 0,7,7);
+  //krónublöðin
+    for (var i = 0; i<fjöldiK; i++){
+      angle = 45
+      rotate(angle);
+      fill(0);
+      noStroke();
+      ellipse(20,0,20,10);
+      }
     }
     pop();
   }
+
 
 }
