@@ -15,8 +15,9 @@ function draw() {
   fjólubleikurFerningur();
   fjólublárFerningur();
   fjólubláttBlóm();
-  línur();
+  keyPressed(); //línur
   hvíturFerningur();
+  }
 
 //function hvíturFerningur_2(){
   //lína þvert yfir hinar línurnar
@@ -104,21 +105,21 @@ function fjólubláttBlóm(){
   }
 }
 
-function línur(){
-  //if(){
-  push();
-  strokeWeight(2);
-  stroke(0);
-  line(0,67,50,0);
-  line(0,133,100,0);
-  line(0,215,165,0);
-  line(0,298,225,0);
-  line(0,380,250,43);
-  line(0,450,250,120);
-  line(60,450,250,195);
-  line(120,450,250,270);
-  line(175,450,250,350);
-  //}
+function keyPressed(){
+  if(keyCode == 32){
+    push();
+    strokeWeight(2);
+    stroke(0);
+    line(0,67,50,0);
+    line(0,133,100,0);
+    line(0,215,165,0);
+    line(0,298,225,0);
+    line(0,380,250,43);
+    line(0,450,250,120);
+    line(60,450,250,195);
+    line(120,450,250,270);
+    line(175,450,250,350);
+  }
   pop();
 }
 
@@ -147,4 +148,4 @@ function hvíturFerningur(){
   }
 
 
-}
+//}
