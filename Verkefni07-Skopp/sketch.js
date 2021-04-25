@@ -27,10 +27,16 @@ function draw() {
   if ((boltiX > width-boltiStaerd/2))  {
     hradiX = hradiX * -1;
   }
-  	// Athuga hvort boltinn snertir þakið
+  // Athuga hvort boltinn snertir þakið
   if ((boltiY < boltiStaerd)) {
     hradiY = hradiY * -1;
   }
+  //Athuga hvort boltinn snertir spaðann
+  if ((boltiX+boltiStaerd/2 > mouseX-spadiBreidd/2) //snertir vinstri kant spaðans
+    &&(boltiX-boltiStaerd/2 < mouseX+spadiBreidd/2) //snertir hægri kant spaðans
+    &&(boltiY+boltiStaerd/2 > mouseY-spadiThykkt/2) //snertir ofan á spaðann
+    &&(boltiY-boltiStaerd/2 < mouseY-spadiThykkt/2+1)) //fer ekki í gegnum spaðann
+
 	// Teikna boltann
   fill(236,36,94);
   rect(boltiX, boltiY, boltiStaerd, boltiStaerd);
@@ -42,4 +48,6 @@ function draw() {
 	// Teikna stigin
   fill(0);
   text("Stig: " + stig,10,20);
+
+
 }
