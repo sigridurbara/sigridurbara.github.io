@@ -32,10 +32,11 @@ function draw() {
     hradiY = hradiY * -1;
   }
   //Athuga hvort boltinn snertir spaðann
-  if ((boltiX+boltiStaerd/2 > mouseX-spadiBreidd/2) //snertir vinstri kant spaðans
-    &&(boltiX-boltiStaerd/2 < mouseX+spadiBreidd/2) //snertir hægri kant spaðans
-    &&(boltiY+boltiStaerd/2 > mouseY-spadiThykkt/2) //snertir ofan á spaðann
-    &&(boltiY-boltiStaerd/2 < mouseY-spadiThykkt/2+1)) //fer ekki í gegnum spaðann
+  if (boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
+    boltiX+boltiStaerd < mouseX + spadiBreidd/2 &&
+		boltiY+boltiStaerd < mouseY + spadiThykkt/2) {
+    hradiY = hradiY * -1;
+    }
 
 	// Teikna boltann
   fill(236,36,94);
