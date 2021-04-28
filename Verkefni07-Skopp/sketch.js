@@ -6,8 +6,8 @@ var hradiX = 5;
 var hradiY = -6;
 var boltiStaerd = 20;
 var stig = 0;
-var spadiBreidd = 150;
-var spadiThykkt = 25;
+var spadiBreidd = 120;
+var spadiThykkt = 10;
 var spadiY;
 
 function setup() {
@@ -26,26 +26,33 @@ function draw() {
 	// Athuga hvort boltinn snertir vegginn hægra megin:
   if ((boltiX > width-boltiStaerd/2))  {
     hradiX = hradiX * -1;
-  }
+	}
+//Athuga hvort boltinn snertir vegginn vinstra megin:
+	if (boltiX < boltiStaerd/2){
+		hradiX = hradiX * -1;
+	}
   // Athuga hvort boltinn snertir þakið
   if ((boltiY < boltiStaerd)) {
     hradiY = hradiY * -1;
   }
   //Athuga hvort boltinn snertir spaðann
-  if (boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
+	if (boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
     boltiX+boltiStaerd < mouseX + spadiBreidd/2 &&
-		boltiY+boltiStaerd < mouseY + spadiThykkt/2) {
+		boltiY+boltiStaerd > spadiY + spadiThykkt/4) {
     hradiY = hradiY * -1;
-    }
+		stig = stig+1;
+
+  }
+
 
 	// Teikna boltann
   fill(236,36,94);
   rect(boltiX, boltiY, boltiStaerd, boltiStaerd);
 	// Teikna spaðann
-  fill(3,123,227);
+  fill(46, 204, 113); //upphaflegi liturinn: fill(3,123,227);
   rect(mouseX,spadiY ,spadiBreidd,spadiThykkt);
   fill (0);
-  ellipse(mouseX, spadiY, 10,10);
+  ellipse(mouseX, spadiY, 5,5);
 	// Teikna stigin
   fill(0);
   text("Stig: " + stig,10,20);
