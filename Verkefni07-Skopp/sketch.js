@@ -1,14 +1,14 @@
 // Hér kemur kóðinn þinn:
 
-var boltiX = 150;
+var boltiX = 300;
 var boltiY = 300;
 var hradiX = 5;
 var hradiY = -6;
-var boltiStaerd = 20;
+var boltiStaerd = 10;
 var stig = 0;
 var spadiBreidd = 120;
 var spadiThykkt = 15;
-var spadiY = 10;
+var spadiY = 8;
 
 function setup() {
 	createCanvas(400,500);
@@ -36,25 +36,66 @@ function draw() {
     hradiY = hradiY * -1;
 	}
 	//Athuga hvort boltinn snertir þakið
-	if (boltiY-boltiStaerd/2 < 0){
+	if (abs(boltiY-boltiStaerd/2 < 0)){
 		hradiY = hradiY * -1;
 		stig = stig-1;
+		//hradiX = hradiX-1
+		//hradiY = hradiY-1
 
   }
   //Athuga hvort boltinn snertir spaðann
-	if (boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
+	if (abs(boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
     boltiX+boltiStaerd < mouseX + spadiBreidd/2 &&
-		boltiY-boltiStaerd < spadiY - spadiThykkt/2) {
+		boltiY-boltiStaerd < spadiY - spadiThykkt/2)) {
     hradiY = hradiY * -1;
 		stig = stig+1;
 
   }
 	//Ef boltinn fer út af
 
+	//teikna boltann
+	   push();
+			//angleMode(DEGREES);
+			//angle = 45
+	  //miðjan á boltanum
+	    fill(0);
+	    rect(boltiX, boltiY, boltiStaerd, boltiStaerd) //0, 0,7,7);
+	  //armarnir
+			//armar hægra megin við miðju
+	      fill(0);
+	      noStroke();
+	      ellipse(boltiX+20,boltiY-5,10,5);
+				fill(0);
+	      noStroke();
+	      ellipse(boltiX+20,boltiY+5,10,5);
+			//armar vinstra megin við miðju
+				fill(0);
+				noStroke();
+				ellipse(boltiX-20,boltiY+5,-10,5);
+				fill(0);
+				noStroke();
+				ellipse(boltiX-20,boltiY-5,-10,5);
+			//armar fyrir ofan miðju
+				fill(0);
+				noStroke();
+				ellipse(boltiX+5,boltiY-20,5,10);
+				fill(0);
+				noStroke();
+				ellipse(boltiX-5,boltiY-20,5,10);
+			//armar fyrir neðan miðju
+				fill(0);
+				noStroke();
+				ellipse(boltiX+5,boltiY+20,5,10);
+				fill(0);
+				noStroke();
+				ellipse(boltiX-5,boltiY+20,5,10);
+			pop();
+
 
 	// Teikna boltann
-  fill(236,36,94);
-  rect(boltiX, boltiY, boltiStaerd, boltiStaerd);
+  //fill(236,36,94);
+  //rect(boltiX, boltiY, boltiStaerd, boltiStaerd);
+
 	// Teikna spaðann
   fill(46, 204, 113); //upphaflegi liturinn: fill(3,123,227);
   rect(mouseX,spadiY,spadiBreidd,spadiThykkt);
