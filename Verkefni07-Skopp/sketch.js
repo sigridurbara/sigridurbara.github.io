@@ -69,7 +69,7 @@ function draw() {
 		background(255,200,0);
 	}
 	if(stig>5 && stig<15){
-		background(230,126,34);
+		background(243,156,18);
 	}
 	if(stig>15 && stig<30){
 		background(231,76,60);
