@@ -1,18 +1,18 @@
 // Hér kemur kóðinn þinn:
 
-var boltiX = 300;
+var boltiX = 150;
 var boltiY = 300;
 var hradiX = 5;
 var hradiY = -6;
 var boltiStaerd = 20;
 var stig = 0;
 var spadiBreidd = 120;
-var spadiThykkt = 10;
-var spadiY;
+var spadiThykkt = 15;
+var spadiY = 10;
 
 function setup() {
 	createCanvas(400,500);
-	spadiY = height - 455;
+	//spadiY = height - 455;
 	rectMode(CENTER);
 	textFont("Courier New",16);
 	textStyle(BOLD);
@@ -31,14 +31,20 @@ function draw() {
 	if (boltiX < boltiStaerd/2){
 		hradiX = hradiX * -1;
 	}
-  // Athuga hvort boltinn snertir þakið
+  // Athuga hvort boltinn snertir botninn
   if ((boltiY+boltiStaerd/2 > height)){ //< boltiStaerd)) {
     hradiY = hradiY * -1;
+	}
+	//Athuga hvort boltinn snertir þakið
+	if (boltiY-boltiStaerd/2 < 0){
+		hradiY = hradiY * -1;
+		stig = stig-1;
+
   }
   //Athuga hvort boltinn snertir spaðann
 	if (boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
     boltiX+boltiStaerd < mouseX + spadiBreidd/2 &&
-		boltiY+boltiStaerd < spadiY - spadiThykkt/4) { //LAGA!!!!!!!!!
+		boltiY-boltiStaerd < spadiY - spadiThykkt/2) {
     hradiY = hradiY * -1;
 		stig = stig+1;
 
@@ -56,7 +62,7 @@ function draw() {
   ellipse(mouseX, spadiY, 3,3);
 	// Teikna stigin
   fill(0);
-  text("Stig: " + stig,10,20);
+  text("Stig: " + stig,10,480);
 
 
 }
