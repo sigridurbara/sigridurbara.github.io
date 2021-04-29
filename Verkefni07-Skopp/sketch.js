@@ -38,61 +38,70 @@ function draw() {
 	//Athuga hvort boltinn snertir þakið
 	if (abs(boltiY-boltiStaerd/2 < 0)){
 		stig = stig-1;
+		if(hradiX>5){
 		hradiY = hradiY * -1;
-		hradiX = 5
-		hradiY = 6
-
+		hradiX = hradiX-2
+		hradiY = hradiY-2
+		}
+			else{
+				hradiY = hradiY * -1;
+				hradiX = hradiX * -1;
+	 	}
   }
   //Athuga hvort boltinn snertir spaðann
 	if (abs(boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
     boltiX+boltiStaerd < mouseX + spadiBreidd/2 &&
 		boltiY-boltiStaerd < spadiY+boltiStaerd/2 - spadiThykkt/2)) {
 		stig = stig+1;
-			if(hradiY<15){
+			if(hradiX<15){
 				hradiY = hradiY * -1.01;
-				hradiX = hradiX * -1.01;
+				hradiX = hradiX * -1.02;
 			}
 			else{
 				hradiY = hradiY * -1;
 			}
   }
+//Litur á bakgrunn
+	if(stig<0){
+		background(127,140,141);
+	}
+	if(stig>0 && stig>5){
+		background(255,200,0);
+	}
+	if(stig>5 && stig<15){
+		background(230,126,34);
+	}
+	if(stig>15 && stig<30){
+		background(231,76,60);
+	}
+	if(stig>30){
+		background(52,152,219);
+	}
+
+
 	//Ef boltinn fer út af
 
 	//teikna boltann
-	   push();
+		push();
+			noStroke();
 			//angleMode(DEGREES);
 			//angle = 45
 	  //miðjan á boltanum
-	    fill(0);
+	    fill(23, 165, 137);
 	    rect(boltiX, boltiY, boltiStaerd, boltiStaerd) //0, 0,7,7);
 	  //armarnir
 			//armar hægra megin við miðju
-	      fill(0);
-	      noStroke();
+	      fill(255);
 	      ellipse(boltiX+20,boltiY-5,10,5);
-				fill(0);
-	      noStroke();
 	      ellipse(boltiX+20,boltiY+5,10,5);
 			//armar vinstra megin við miðju
-				fill(0);
-				noStroke();
 				ellipse(boltiX-20,boltiY+5,-10,5);
-				fill(0);
-				noStroke();
 				ellipse(boltiX-20,boltiY-5,-10,5);
 			//armar fyrir ofan miðju
-				fill(0);
-				noStroke();
 				ellipse(boltiX+5,boltiY-20,5,10);
-				fill(0);
-				noStroke();
 				ellipse(boltiX-5,boltiY-20,5,10);
 			//armar fyrir neðan miðju
-				fill(0);
-				noStroke();
 				ellipse(boltiX+5,boltiY+20,5,10);
-				fill(0);
-				noStroke();
 				ellipse(boltiX-5,boltiY+20,5,10);
 			pop();
 
