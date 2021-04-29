@@ -8,7 +8,7 @@ var boltiStaerd = 10;
 var stig = 0;
 var spadiBreidd = 120;
 var spadiThykkt = 15;
-var spadiY = 8;
+var spadiY = 7;
 
 function setup() {
 	createCanvas(400,500);
@@ -37,19 +37,24 @@ function draw() {
 	}
 	//Athuga hvort boltinn snertir þakið
 	if (abs(boltiY-boltiStaerd/2 < 0)){
-		hradiY = hradiY * -1;
 		stig = stig-1;
-		//hradiX = hradiX-1
-		//hradiY = hradiY-1
+		hradiY = hradiY * -1;
+		hradiX = 5
+		hradiY = 6
 
   }
   //Athuga hvort boltinn snertir spaðann
 	if (abs(boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
     boltiX+boltiStaerd < mouseX + spadiBreidd/2 &&
-		boltiY-boltiStaerd < spadiY - spadiThykkt/2)) {
-    hradiY = hradiY * -1;
+		boltiY-boltiStaerd < spadiY+boltiStaerd/2 - spadiThykkt/2)) {
 		stig = stig+1;
-
+			if(hradiY<15){
+				hradiY = hradiY * -1.01;
+				hradiX = hradiX * -1.01;
+			}
+			else{
+				hradiY = hradiY * -1;
+			}
   }
 	//Ef boltinn fer út af
 
