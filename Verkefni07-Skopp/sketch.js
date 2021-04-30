@@ -65,13 +65,13 @@ function draw() {
 	if(stig<0){
 		background(127,140,141);
 	}
-	if(stig>0 && stig>3){
+	if(stig>0 && stig>4){
 		background(255,200,0);
 	}
-	if(stig>3 && stig<8){
+	if(stig>3 && stig<9){
 		background(243,156,18);
 	}
-	if(stig>8 && stig<15){
+	if(stig>8 && stig<16){
 		background(231,76,60);
 	}
 	if(stig>15){
