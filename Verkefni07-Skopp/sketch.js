@@ -55,7 +55,7 @@ function draw() {
 		stig = stig+1;
 			if(hradiX<15){
 				hradiY = hradiY * -1.01;
-				hradiX = hradiX * -1.02;
+				hradiX = hradiX * -1.04;
 			}
 			else{
 				hradiY = hradiY * -1;
@@ -65,16 +65,16 @@ function draw() {
 	if(stig<0){
 		background(127,140,141);
 	}
-	if(stig>0 && stig>4){
+	if(stig>0 && stig>3){
 		background(255,200,0);
 	}
-	if(stig>3 && stig<9){
+	if(stig>2 && stig<8){
 		background(243,156,18);
 	}
-	if(stig>8 && stig<16){
+	if(stig>7 && stig<15){
 		background(231,76,60);
 	}
-	if(stig>15){
+	if(stig>14){
 		background(52,152,219);
 	}
 
