@@ -4,10 +4,10 @@ var kisaX = 10;
 var kisaY = 10;
 var hradiX = 5;
 var hradiY = -6;
-var andlit = 115;
-var eyru = 60;
-var minnieyru = 20 //inn í eyrun
-var augu = 40;
+var andlitKisu = 115;
+var eyruKisu = 60;
+var minnieyruKisu = 20 //inn í eyrun
+var auguKisu = 40;
 
 
 function setup() {
@@ -39,7 +39,11 @@ function draw() {
 	if (abs(kisaY-andlit/2 < 0)){
 			hradiY = hradiY * -1;
 			hradiX = hradiX * -1;
+		}
+	kisa(kisaX,kisaY,andlitKisu,minnieyruKisu,auguKisu);
 }
+
+
 
 function kisa(x,y,andlit,minnieyru,augu){
 	rectMode(CENTER);
@@ -89,7 +93,6 @@ function kisa(x,y,andlit,minnieyru,augu){
 }
 
 
-  }
 //Litur á bakgrunn
 	if(stig<0){
 		background(127,140,141);
