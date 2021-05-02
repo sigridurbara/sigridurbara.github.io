@@ -12,10 +12,9 @@ var augu = 40;
 
 function setup() {
 	createCanvas(400,500);
-	//spadiY = height - 455;
-	rectMode(CENTER);
-	textFont("Courier New",16);
-	textStyle(BOLD);
+	//rectMode(CENTER);
+	//textFont("Courier New",16);
+	//textStyle(BOLD);
 }
 
 function draw() {
