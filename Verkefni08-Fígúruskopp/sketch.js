@@ -23,20 +23,20 @@ function draw() {
   kisaX = kisaX + hradiX;
   kisaY = kisaY + hradiY;
 	// Athuga hvort kisa snertir vegginn hægra megin:
-  if ((kisaX > width-boltiStaerd/2))  {
+  if ((kisaX > width-andlit/2))  {
     hradiX = hradiX * -1;
 	}
 //Athuga hvort kisa snertir vegginn vinstra megin:
-	if (kisaX < boltiStaerd/2){
+	if (kisaX < andlit/2){
 		hradiX = hradiX * -1;
 	}
   // Athuga hvort kisa snertir botninn
-  if ((kisaY+boltiStaerd/2 > height)){ //< boltiStaerd)) {
+  if ((kisaY+andlit/2 > height)){ //< boltiStaerd)) {
     hradiY = hradiY * -1;
 		hradiX = hradiX * -1;
 	}
 	//Athuga hvort kisa snertir þakið
-	if (abs(kisaY-boltiStaerd/2 < 0)){
+	if (abs(kisaY-andlit/2 < 0)){
 			hradiY = hradiY * -1;
 			hradiX = hradiX * -1;
 }
