@@ -21,7 +21,7 @@ function draw() {
   background(174, 214, 241);
 	rectMode(CENTER);
 	// Reikna ný hnit út frá hraða kisu:
-  kisaX = kisaX + hradiX;
+  kisaX = kisaX //+ hradiX;
   kisaY = kisaY + hradiY;
 	// Athuga hvort kisa snertir vegginn hægra megin:
   if ((kisaX > width-andlitKisu/2))  {
@@ -99,11 +99,12 @@ function kisa(x,y,andlit,minnieyru,augu){
 //NEFIÐ
   fill(0);
   triangle(x-4,y+8,x,y+16,x+4,y+8);
+
 //VEIÐIHÁRIN
   //vinstri veiðihár
   line(x-augu-augu,y,x-35,y+12); //efsta veiðihár
   line(x-augu-augu,y+20,x-38,y+20); //miðju veiðihá
-  //line(x-80,y+40,y-35,y+28); //neðsta veiðihár
+  line(x-augu-augu,y+40,x-35,y+28); //neðsta veiðihár
   //hægri veiðihár
   line(x+35,y+12,x+augu+augu,y); //efsta veiðihár
   line(x+38,y+20,x+augu+augu,y+20); //miðju veiðihár
