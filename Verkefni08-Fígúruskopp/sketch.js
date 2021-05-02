@@ -1,11 +1,11 @@
 // Hér kemur kóðinn þinn:
 
-var kisaX = 10;
-var kisaY = 10;
+var kisaX = 100;
+var kisaY = 100;
 var hradiX = 5;
-var hradiY = -6;
+var hradiY = 3;
 var andlitKisu = 115;
-var eyruKisu = 60;
+//var eyruKisu = 60;
 var minnieyruKisu = 20 //inn í eyrun
 var auguKisu = 40;
 
@@ -19,12 +19,13 @@ function setup() {
 
 function draw() {
   background(174, 214, 241);
+	rectMode(CENTER);
 	// Reikna ný hnit út frá hraða kisu:
   kisaX = kisaX + hradiX;
   kisaY = kisaY + hradiY;
 	// Athuga hvort kisa snertir vegginn hægra megin:
   if ((kisaX > width-andlitKisu/2))  {
-    hradiX = hradiX * -1;
+    hradiY = hradiY * -1;
 		andlitKisu = random(100,130);
 	  minnieyruKisu = random(10,50);
 	  auguKisu = random(25,60);
@@ -32,7 +33,7 @@ function draw() {
 	}
 //Athuga hvort kisa snertir vegginn vinstra megin:
 	if (kisaX < andlitKisu/2){
-		hradiX = hradiX * -1;
+		hradiY = hradiY * -1;
 		andlitKisu = random(100,130);
 	  minnieyruKisu = random(10,50);
 	  auguKisu = random(25,60);
@@ -41,7 +42,7 @@ function draw() {
   // Athuga hvort kisa snertir botninn
   if ((kisaY+andlitKisu/2 > height)){ //< boltiStaerd)) {
     hradiY = hradiY * -1;
-		hradiX = hradiX * -1;
+		//hradiX = hradiX * -1;
 		andlitKisu = random(100,130);
 	  minnieyruKisu = random(10,50);
 	  auguKisu = random(25,60);
@@ -50,13 +51,15 @@ function draw() {
 	//Athuga hvort kisa snertir þakið
 	if (abs(kisaY-andlitKisu/2 < 0)){
 			hradiY = hradiY * -1;
-			hradiX = hradiX * -1;
+			//hradiX = hradiX * -1;
 			andlitKisu = random(100,130);
 		  minnieyruKisu = random(10,50);
 		  auguKisu = random(25,60);
 			background(174, 214, 241);
 		}
 	kisa(kisaX,kisaY,andlitKisu,minnieyruKisu,auguKisu);
+
+
 }
 
 
@@ -97,11 +100,11 @@ function kisa(x,y,andlit,minnieyru,augu){
   fill(0);
   triangle(x-4,y+8,x,y+16,x+4,y+8);
 //VEIÐIHÁRIN
-  //hægri veiðihár
+  //vinstri veiðihár
   line(x-augu-augu,y,x-35,y+12); //efsta veiðihár
   line(x-augu-augu,y+20,x-38,y+20); //miðju veiðihá
-  line(x-augu-augu,y+40,y-35,y+28); //neðsta veiðihár
-  //vinstri veiðihár
+  //line(x-80,y+40,y-35,y+28); //neðsta veiðihár
+  //hægri veiðihár
   line(x+35,y+12,x+augu+augu,y); //efsta veiðihár
   line(x+38,y+20,x+augu+augu,y+20); //miðju veiðihár
   line(x+35,y+28,x+augu+augu,y+40); //neðsta veiðihár

@@ -45,11 +45,11 @@ function draw() {
   fill(0);
   triangle(mouseX-4,mouseY+8,mouseX,mouseY+16,mouseX+4,mouseY+8);
 //VEIÐIHÁRIN
-  //hægri veiðihár
+  //vinstri veiðihár
   line(mouseX-augu-augu,mouseY,mouseX-35,mouseY+12); //efsta veiðihár
   line(mouseX-augu-augu,mouseY+20,mouseX-38,mouseY+20); //miðju veiðihá
   line(mouseX-augu-augu,mouseY+40,mouseX-35,mouseY+28); //neðsta veiðihár
-  //vinstri veiðihár
+  //hægri veiðihár
   line(mouseX+35,mouseY+12,mouseX+augu+augu,mouseY); //efsta veiðihár
   line(mouseX+38,mouseY+20,mouseX+augu+augu,mouseY+20); //miðju veiðihár
   line(mouseX+35,mouseY+28,mouseX+augu+augu,mouseY+40); //neðsta veiðihár
