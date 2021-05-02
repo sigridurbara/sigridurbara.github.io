@@ -23,37 +23,37 @@ function draw() {
   kisaX = kisaX + hradiX;
   kisaY = kisaY + hradiY;
 	// Athuga hvort kisa snertir vegginn hægra megin:
-  if ((kisaX > width-andlit/2))  {
+  if ((kisaX > width-andlitKisu/2))  {
     hradiX = hradiX * -1;
-		andlit = random(100,130);
-	  minnieyru = random(10,50);
-	  augu = random(25,60);
+		andlitKisu = random(100,130);
+	  minnieyruKisu = random(10,50);
+	  auguKisu = random(25,60);
 		background(245, 183, 177);
 	}
 //Athuga hvort kisa snertir vegginn vinstra megin:
-	if (kisaX < andlit/2){
+	if (kisaX < andlitKisu/2){
 		hradiX = hradiX * -1;
-		andlit = random(100,130);
-	  minnieyru = random(10,50);
-	  augu = random(25,60);
+		andlitKisu = random(100,130);
+	  minnieyruKisu = random(10,50);
+	  auguKisu = random(25,60);
 		background(162, 217, 206);
 	}
   // Athuga hvort kisa snertir botninn
-  if ((kisaY+andlit/2 > height)){ //< boltiStaerd)) {
+  if ((kisaY+andlitKisu/2 > height)){ //< boltiStaerd)) {
     hradiY = hradiY * -1;
 		hradiX = hradiX * -1;
-		andlit = random(100,130);
-	  minnieyru = random(10,50);
-	  augu = random(25,60);
+		andlitKisu = random(100,130);
+	  minnieyruKisu = random(10,50);
+	  auguKisu = random(25,60);
 		background(210, 180, 222);
 	}
 	//Athuga hvort kisa snertir þakið
-	if (abs(kisaY-andlit/2 < 0)){
+	if (abs(kisaY-andlitKisu/2 < 0)){
 			hradiY = hradiY * -1;
 			hradiX = hradiX * -1;
-			andlit = random(100,130);
-		  minnieyru = random(10,50);
-		  augu = random(25,60);
+			andlitKisu = random(100,130);
+		  minnieyruKisu = random(10,50);
+		  auguKisu = random(25,60);
 			background(174, 214, 241);
 		}
 	kisa(kisaX,kisaY,andlitKisu,minnieyruKisu,auguKisu);
