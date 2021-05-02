@@ -4,6 +4,10 @@ var kisaX = 10;
 var kisaY = 10;
 var hradiX = 5;
 var hradiY = -6;
+var andlit = 115;
+var eyru = 60;
+var minnieyru = 20 //inn í eyrun
+var augu = 40;
 
 
 function setup() {
