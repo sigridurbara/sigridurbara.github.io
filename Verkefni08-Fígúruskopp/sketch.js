@@ -1,7 +1,7 @@
 // Hér kemur kóðinn þinn:
 
-var boltiX = 300;
-var boltiY = 300;
+var kisaX = 10;
+var kisaY = 10;
 var hradiX = 5;
 var hradiY = -6;
 var boltiStaerd = 10;
@@ -20,22 +20,22 @@ function setup() {
 
 function draw() {
   background(255,200,0);
-	// Reikna ný hnit út frá hraða boltans:
+	// Reikna ný hnit út frá hraða kisu:
   boltiX = boltiX + hradiX;
   boltiY = boltiY + hradiY;
-	// Athuga hvort boltinn snertir vegginn hægra megin:
+	// Athuga hvort kisa snertir vegginn hægra megin:
   if ((boltiX > width-boltiStaerd/2))  {
     hradiX = hradiX * -1;
 	}
-//Athuga hvort boltinn snertir vegginn vinstra megin:
+//Athuga hvort kisa snertir vegginn vinstra megin:
 	if (boltiX < boltiStaerd/2){
 		hradiX = hradiX * -1;
 	}
-  // Athuga hvort boltinn snertir botninn
+  // Athuga hvort kisa snertir botninn
   if ((boltiY+boltiStaerd/2 > height)){ //< boltiStaerd)) {
     hradiY = hradiY * -1;
 	}
-	//Athuga hvort boltinn snertir þakið
+	//Athuga hvort kisa snertir þakið
 	if (abs(boltiY-boltiStaerd/2 < 0)){
 		stig = stig-1;
 		if(hradiX>5){
