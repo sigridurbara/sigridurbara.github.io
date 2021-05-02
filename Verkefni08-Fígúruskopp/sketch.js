@@ -18,27 +18,43 @@ function setup() {
 }
 
 function draw() {
-  background(178, 235, 242);
+  background(174, 214, 241);
 	// Reikna ný hnit út frá hraða kisu:
   kisaX = kisaX + hradiX;
   kisaY = kisaY + hradiY;
 	// Athuga hvort kisa snertir vegginn hægra megin:
   if ((kisaX > width-andlit/2))  {
     hradiX = hradiX * -1;
+		andlit = random(100,130);
+	  minnieyru = random(10,50);
+	  augu = random(25,60);
+		background(245, 183, 177);
 	}
 //Athuga hvort kisa snertir vegginn vinstra megin:
 	if (kisaX < andlit/2){
 		hradiX = hradiX * -1;
+		andlit = random(100,130);
+	  minnieyru = random(10,50);
+	  augu = random(25,60);
+		background(162, 217, 206);
 	}
   // Athuga hvort kisa snertir botninn
   if ((kisaY+andlit/2 > height)){ //< boltiStaerd)) {
     hradiY = hradiY * -1;
 		hradiX = hradiX * -1;
+		andlit = random(100,130);
+	  minnieyru = random(10,50);
+	  augu = random(25,60);
+		background(210, 180, 222);
 	}
 	//Athuga hvort kisa snertir þakið
 	if (abs(kisaY-andlit/2 < 0)){
 			hradiY = hradiY * -1;
 			hradiX = hradiX * -1;
+			andlit = random(100,130);
+		  minnieyru = random(10,50);
+		  augu = random(25,60);
+			background(174, 214, 241);
 		}
 	kisa(kisaX,kisaY,andlitKisu,minnieyruKisu,auguKisu);
 }
@@ -91,21 +107,3 @@ function kisa(x,y,andlit,minnieyru,augu){
   line(x+35,y+28,x+augu+augu,y+40); //neðsta veiðihár
 
 }
-
-
-//Litur á bakgrunn
-	if(stig<0){
-		background(127,140,141);
-	}
-	if(stig>0 && stig>3){
-		background(255,200,0);
-	}
-	if(stig>2 && stig<8){
-		background(243,156,18);
-	}
-	if(stig>7 && stig<15){
-		background(231,76,60);
-	}
-	if(stig>14){
-		background(52,152,219);
-	}
