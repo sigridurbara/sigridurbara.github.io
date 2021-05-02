@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  background(255,200,0);
+  background(178, 235, 242);
 	// Reikna ný hnit út frá hraða kisu:
   boltiX = boltiX + hradiX;
   boltiY = boltiY + hradiY;
