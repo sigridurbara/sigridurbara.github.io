@@ -39,12 +39,14 @@ function draw() {
 	if (abs(boltiY-boltiStaerd/2 < 0)){
 		stig = stig-1;
 		if(hradiX>5){
+		//hradiY = -6;
 		hradiY = hradiY * -1;
 		hradiX = hradiX-2
 		hradiY = hradiY-2
 		}
 			else{
-				hradiY = hradiY * -1;
+				hradiY = 6;
+				//hradiY = hradiY * -1;
 				hradiX = hradiX * -1;
 	 	}
   }

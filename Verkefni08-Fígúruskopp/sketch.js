@@ -3,11 +3,12 @@
 var kisaX = 100;
 var kisaY = 100;
 var hradiX = 5;
-var hradiY = 3;
+var hradiY = -6;
 var andlitKisu = 115;
 //var eyruKisu = 60;
 var minnieyruKisu = 20 //inn í eyrun
 var auguKisu = 40;
+//var stig = 2;
 
 
 function setup() {
@@ -21,43 +22,66 @@ function draw() {
   background(174, 214, 241);
 	rectMode(CENTER);
 	// Reikna ný hnit út frá hraða kisu:
-  kisaX = kisaX //+ hradiX;
+  kisaX = kisaX + hradiX;
   kisaY = kisaY + hradiY;
 	// Athuga hvort kisa snertir vegginn hægra megin:
   if ((kisaX > width-andlitKisu/2))  {
+		//hradiY = -6;
     hradiY = hradiY * -1;
+		hradiX = hradiX * -1;
 		andlitKisu = random(100,130);
 	  minnieyruKisu = random(10,50);
 	  auguKisu = random(25,60);
-		background(245, 183, 177);
+		//stig = 3
+		//background(245, 183, 177);
 	}
 //Athuga hvort kisa snertir vegginn vinstra megin:
 	if (kisaX < andlitKisu/2){
+		//hradiY = -6;
 		hradiY = hradiY * -1;
+		hradiX = hradiX * -1;
 		andlitKisu = random(100,130);
 	  minnieyruKisu = random(10,50);
 	  auguKisu = random(25,60);
-		background(162, 217, 206);
+		//stig = 1
+		//background(162, 217, 206);
 	}
   // Athuga hvort kisa snertir botninn
-  if ((kisaY+andlitKisu/2 > height)){ //< boltiStaerd)) {
+  if ((kisaY+andlitKisu/2 > height)){
+		//hradiY = -6;
     hradiY = hradiY * -1;
 		//hradiX = hradiX * -1;
 		andlitKisu = random(100,130);
 	  minnieyruKisu = random(10,50);
 	  auguKisu = random(25,60);
-		background(210, 180, 222);
+		//stig = 4
+		//background(210, 180, 222);
 	}
 	//Athuga hvort kisa snertir þakið
 	if (abs(kisaY-andlitKisu/2 < 0)){
-			hradiY = hradiY * -1;
-			//hradiX = hradiX * -1;
-			andlitKisu = random(100,130);
-		  minnieyruKisu = random(10,50);
-		  auguKisu = random(25,60);
-			background(174, 214, 241);
+		//hradiY = -6;
+		hradiY = hradiY * -1;
+		//hradiX = hradiX * -1;
+		andlitKisu = random(100,130);
+		minnieyruKisu = random(10,50);
+		auguKisu = random(25,60);
+		//stig = 2
+		//background(174, 214, 241);
 		}
 	kisa(kisaX,kisaY,andlitKisu,minnieyruKisu,auguKisu);
+
+	//if(stig = 1){
+		//background(162, 217, 206);
+	//}
+	//if(stig = 2){
+		//background(174, 214, 241);
+	//}
+	//if (stig = 3){
+		//background(245, 183, 177);
+	//}
+	//if(stig = 4){
+		//background(210, 180, 222);
+	//}
 
 
 }
