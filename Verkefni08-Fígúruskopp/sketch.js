@@ -44,6 +44,11 @@ function draw() {
 				hradiX = hradiX * -1;
 	 	}
 
+function kisa(x,y,andlit,minnieyru,augu){
+	
+}
+
+
   }
 //Litur á bakgrunn
 	if(stig<0){
