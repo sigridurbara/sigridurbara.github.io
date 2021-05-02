@@ -4,11 +4,7 @@ var kisaX = 10;
 var kisaY = 10;
 var hradiX = 5;
 var hradiY = -6;
-var boltiStaerd = 10;
-var stig = 0;
-var spadiBreidd = 120;
-var spadiThykkt = 15;
-var spadiY = 7;
+
 
 function setup() {
 	createCanvas(400,500);
@@ -47,19 +43,7 @@ function draw() {
 				hradiY = hradiY * -1;
 				hradiX = hradiX * -1;
 	 	}
-  }
-  //Athuga hvort boltinn snertir spaðann
-	if (abs(boltiX-boltiStaerd/2 > mouseX - spadiBreidd/2 &&
-    boltiX+boltiStaerd < mouseX + spadiBreidd/2 &&
-		boltiY-boltiStaerd < spadiY+boltiStaerd/2 - spadiThykkt/2)) {
-		stig = stig+1;
-			if(hradiX<15){
-				hradiY = hradiY * -1.01;
-				hradiX = hradiX * -1.04;
-			}
-			else{
-				hradiY = hradiY * -1;
-			}
+
   }
 //Litur á bakgrunn
 	if(stig<0){
